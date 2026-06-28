@@ -5,8 +5,11 @@ from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
 
-# Ensure data directory exists for RFQ submissions
-DATA_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'rfq_submissions.json')
+# Ensure data directory exists for RFQ submissions, using /tmp on Vercel
+if os.environ.get('VERCEL'):
+    DATA_FILE = '/tmp/rfq_submissions.json'
+else:
+    DATA_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'rfq_submissions.json')
 
 @app.route('/')
 def home():
@@ -94,12 +97,42 @@ def submit_rfq():
             except Exception as e:
                 app.logger.error(f"Error reading JSON: {e}")
 
+        # Fallback read from /tmp if not already using /tmp but primary read yielded nothing
+        if not rfqs and DATA_FILE != '/tmp/rfq_submissions.json':
+            alt_data_file = '/tmp/rfq_submissions.json'
+            if os.path.exists(alt_data_file):
+                try:
+                    with open(alt_data_file, 'r', encoding='utf-8') as f:
+                        content = f.read().strip()
+                        if content:
+                            rfqs = json.loads(content)
+                except Exception as alt_e:
+                    app.logger.error(f"Error reading from fallback /tmp JSON: {alt_e}")
+
         # Append new record
         rfqs.append(rfq_record)
 
         # Write back to JSON
-        with open(DATA_FILE, 'w', encoding='utf-8') as f:
-            json.dump(rfqs, f, indent=4, ensure_ascii=False)
+        try:
+            dir_name = os.path.dirname(DATA_FILE)
+            if dir_name:
+                os.makedirs(dir_name, exist_ok=True)
+            with open(DATA_FILE, 'w', encoding='utf-8') as f:
+                json.dump(rfqs, f, indent=4, ensure_ascii=False)
+        except Exception as e:
+            app.logger.error(f"Failed to write to primary DATA_FILE: {e}")
+            # If primary write failed and we weren't already writing to /tmp, try /tmp as a fallback
+            if DATA_FILE != '/tmp/rfq_submissions.json':
+                try:
+                    alt_data_file = '/tmp/rfq_submissions.json'
+                    alt_dir = os.path.dirname(alt_data_file)
+                    if alt_dir:
+                        os.makedirs(alt_dir, exist_ok=True)
+                    with open(alt_data_file, 'w', encoding='utf-8') as f:
+                        json.dump(rfqs, f, indent=4, ensure_ascii=False)
+                    app.logger.info("Successfully wrote to fallback /tmp/rfq_submissions.json")
+                except Exception as alt_e:
+                    app.logger.error(f"Failed to write to fallback /tmp JSON file: {alt_e}")
 
         return jsonify({
             'success': True,
