@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarvalokh Exports & Imports | Premium Shrimp & Prawns Nellore</title>
+    <meta name="description" content="Official Export Catalog of Sarvalokh Exports & Imports. Sourced directly from Nellore, India. Supplying premium Vannamei, Black Tiger Prawns, and Freshwater Scampi globally.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Intro Glimpse Cinematic Video Overlay -->
+    <div class="intro-glimpse-overlay" id="intro-glimpse">
+        <video class="intro-glimpse-video" autoplay muted playsinline loop>
+            <source src="{{ url_for('static', filename='images/intro_glimpse.mp4') }}" type="video/mp4">
+        </video>
+        <div class="intro-glimpse-content">
+            <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Sarvalokh Exports & Imports Logo" class="intro-logo">
+            <h2>SARVALOKH</h2>
+            <span>EXPORTS & IMPORTS</span>
+            <div class="intro-loader"></div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="main-header" id="main-header">
+        <div class="container header-container">
+            <a href="#" class="logo-container" id="nav-logo">
+                <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Sarvalokh Exports & Imports Logo" class="logo-img-el">
+                <div class="logo-text">
+                    <span class="logo-brand">SARVALOKH</span>
+                    <span class="logo-sub">EXPORTS & IMPORTS</span>
+                </div>
+            </a>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="#about" class="nav-link">About Hub</a></li>
+                    <li><a href="#products" class="nav-link">Products</a></li>
+                    <li><a href="#processing" class="nav-link">Capabilities</a></li>
+                    <li><a href="#sizing" class="nav-link">Calibration</a></li>
+                    <li><a href="#logistics" class="nav-link">Logistics</a></li>
+                    <li><a href="#rfq" class="nav-link btn-nav" id="nav-btn-rfq">Request Quote</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-bg" style="background-image: linear-gradient(135deg, rgba(7, 20, 38, 0.9) 20%, rgba(7, 20, 38, 0.5) 100%), url('{{ url_for('static', filename='images/hero_background.png') }}');"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge" id="hero-badge"><i class="fa-solid fa-circle-check"></i> OFFICIAL EXPORT CATALOG</div>
+                <h1 class="hero-title" id="hero-heading">Premium Shrimp & Prawns</h1>
+                <p class="hero-subtitle">Sourced directly from the sustainable aquaculture belts of Nellore, Andhra Pradesh, India — the prime aquaculture hub of the world.</p>
+                <div class="hero-actions">
+                    <a href="#products" class="btn btn-primary" id="btn-hero-catalog">Explore Catalog <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#rfq" class="btn btn-secondary" id="btn-hero-quote">Submit RFQ</a>
+                </div>
+            </div>
+            <div class="hero-features">
+                <div class="hero-feat-item">
+                    <span class="feat-val">100%</span>
+                    <span class="feat-lbl">Bio-Secured Sourcing</span>
+                </div>
+                <div class="hero-feat-item">
+                    <span class="feat-val">-25°C</span>
+                    <span class="feat-lbl">Strict Cold Chain</span>
+                </div>
+                <div class="hero-feat-item">
+                    <span class="feat-val">Global</span>
+                    <span class="feat-lbl">Compliance Standard</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C26.9,8.75,57.05,18.3,88.43,26.77,159.27,45.92,243.68,66.44,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">AQUACULTURE HUB OF INDIA</span>
+                <h2 class="section-title">Nellore's Finest Aquaculture</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="lead-text">Nellore is universally recognized as the prime aquaculture hub of India. Benefiting from ideal geographical features, nutrient-rich coastal belts, and advanced bio-secured techniques, we supply premium seafood to the most selective international markets.</p>
+                    <p>At Sarvalokh Seafood Exports, our partnering infrastructure holds top-tier global food safety certifications. We oversee every phase—from sustainable harvesting in brackish water farms to precise anatomical processing, rapid individual freezing (IQF), and continuous sub-zero logistics. Our products meet the rigid regulatory guidelines of the USA, European Union, Japan, and other global regions.</p>
+                    <div class="certifications-row">
+                        <div class="cert-item" title="Best Aquaculture Practices"><i class="fa-solid fa-shield-halved"></i> BAP Certified</div>
+                        <div class="cert-item" title="Hazard Analysis Critical Control Point"><i class="fa-solid fa-clipboard-check"></i> HACCP Compliant</div>
+                        <div class="cert-item" title="British Retail Consortium"><i class="fa-solid fa-award"></i> BRC Global Standard</div>
+                        <div class="cert-item" title="US Food and Drug Administration"><i class="fa-solid fa-circle-nodes"></i> FDA Approved</div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-temperature-arrow-down"></i></div>
+                        <h3>Deep Freezing</h3>
+                        <p>Immediate preservation at ultra-cold levels (-40°C contact freezing) preserves natural sweetness and snap.</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-leaf"></i></div>
+                        <h3>100% Sustainable</h3>
+                        <p>Traceable back to eco-responsible, low-density brackish water farms and freshwater basins.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">EXPORT PRODUCT RANGE</span>
+                <h2 class="section-title">Our Premium Selections</h2>
+                <div class="section-divider"></div>
+                <p class="section-desc text-center">We process and pack three premium varieties of shrimp and prawns, calibrated carefully to meet rigorous volume and niche luxury trades globally.</p>
+            </div>
+
+            <div class="products-grid">
+                <!-- Product 1: Vannamei Whiteleg Shrimp -->
+                <div class="product-card" id="product-vannamei">
+                    <div class="product-image-container">
+                        <img src="{{ url_for('static', filename='images/vannamei_shrimp.png') }}" alt="Vannamei Whiteleg Shrimp" class="product-img">
+                        <div class="product-tag">Volume Trade Standard</div>
+                    </div>
+                    <div class="product-info">
+                        <span class="scientific-name">Litopenaeus vannamei</span>
+                        <h3 class="product-name">Vannamei Whiteleg Shrimp</h3>
+                        <p class="product-description">The standard benchmark for global volume trade. Highly favored by supermarkets and restaurant chains worldwide due to its excellent sweet flavor profile, crisp bite, and perfect processing adaptation.</p>
+                        
+                        <div class="spec-list">
+                            <div class="spec-item">
+                                <span class="spec-label">Primary Export Forms:</span>
+                                <span class="spec-val">HOSO, HLSO, EZ-Peel, PDTO, P&D</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Core Target Markets:</span>
+                                <span class="spec-val">USA, European Union, China, Vietnam, UAE</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Sourcing:</span>
+                                <span class="spec-val">100% certified bio-secured brackish water farms</span>
+                            </div>
+                        </div>
+                        <a href="#rfq" class="btn btn-card-rfq" data-product="Vannamei Whiteleg Shrimp">Select for RFQ</a>
+                    </div>
+                </div>
+
+                <!-- Product 2: Black Tiger Prawns -->
+                <div class="product-card" id="product-blacktiger">
+                    <div class="product-image-container">
+                        <img src="{{ url_for('static', filename='images/black_tiger_prawn.png') }}" alt="Black Tiger Prawns" class="product-img">
+                        <div class="product-tag luxury-tag">Niche Luxury Variety</div>
+                    </div>
+                    <div class="product-info">
+                        <span class="scientific-name">Penaeus monodon</span>
+                        <h3 class="product-name">Black Tiger Prawns</h3>
+                        <p class="product-description">A high-value, niche luxury variety. Noted for its signature dramatic tiger stripes, thicker shell structure, remarkably firm texture, and striking bright red color accentuation upon cooking.</p>
+                        
+                        <div class="spec-list">
+                            <div class="spec-item">
+                                <span class="spec-label">Primary Export Forms:</span>
+                                <span class="spec-val">Head-On (HOSO), Headless Shell-On (HLSO)</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Core Target Markets:</span>
+                                <span class="spec-val">Japan, Western Europe, Luxury Food Service</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Sourcing:</span>
+                                <span class="spec-val">Premium traditional coastal low-density farms</span>
+                            </div>
+                        </div>
+                        <a href="#rfq" class="btn btn-card-rfq" data-product="Black Tiger Prawns">Select for RFQ</a>
+                    </div>
+                </div>
+
+                <!-- Product 3: Freshwater Scampi -->
+                <div class="product-card" id="product-scampi">
+                    <div class="product-image-container">
+                        <img src="{{ url_for('static', filename='images/freshwater_scampi.png') }}" alt="Freshwater Scampi" class="product-img">
+                        <div class="product-tag luxury-tag">Giant River Prawns</div>
+                    </div>
+                    <div class="product-info">
+                        <span class="scientific-name">Macrobrachium rosenbergii</span>
+                        <h3 class="product-name">Freshwater Scampi</h3>
+                        <p class="product-description">Known in fine dining as Giant River Prawns. Featuring beautiful signature blue legs and robust meat clusters that perfectly mimic lobster flavor, making it a high-end alternative for white-cloth hospitality menus.</p>
+                        
+                        <div class="spec-list">
+                            <div class="spec-item">
+                                <span class="spec-label">Primary Export Forms:</span>
+                                <span class="spec-val">Whole Frozen, Headless Tails</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Core Target Markets:</span>
+                                <span class="spec-val">USA, Middle East Hospitality Networks</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Sourcing:</span>
+                                <span class="spec-val">Controlled freshwater basins along the Pennar River delta</span>
+                            </div>
+                        </div>
+                        <a href="#rfq" class="btn btn-card-rfq" data-product="Freshwater Scampi">Select for RFQ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Processing Capabilities Section -->
+    <section class="processing-section" id="processing">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">PROCESSING CAPABILITIES & FORMATS</span>
+                <h2 class="section-title">Anatomical Specification & Formats</h2>
+                <div class="section-divider"></div>
+                <p class="section-desc text-center">We comply with precise anatomical requirements for global markets. Below are our five primary export configurations.</p>
+            </div>
+
+            <div class="processing-table-wrapper">
+                <table class="processing-table" id="formats-table">
+                    <thead>
+                        <tr>
+                            <th>Processing Type</th>
+                            <th>Trade Code</th>
+                            <th>Anatomical Description</th>
+                            <th>Standard Packing</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-row-hover">
+                            <td class="proc-name"><strong>Head-On Shell-On</strong></td>
+                            <td><span class="code-badge">HOSO</span></td>
+                            <td>100% natural intact state. Includes head, shell armor, antenna, and full tail fan.</td>
+                            <td class="packing-badge">Block / Semi-IQF</td>
+                        </tr>
+                        <tr class="table-row-hover">
+                            <td class="proc-name"><strong>Headless Shell-On</strong></td>
+                            <td><span class="code-badge">HLSO</span></td>
+                            <td>Head is removed cleanly. The body shell segments and tail fan remain completely intact.</td>
+                            <td class="packing-badge">Block Frozen</td>
+                        </tr>
+                        <tr class="table-row-hover">
+                            <td class="proc-name"><strong>Easy-Peel Formats</strong></td>
+                            <td><span class="code-badge">EZ-PEEL</span></td>
+                            <td>Headless shrimp with a uniform mechanical line cut down the back shell for quick peeling.</td>
+                            <td class="packing-badge">IQF / Polybags</td>
+                        </tr>
+                        <tr class="table-row-hover">
+                            <td class="proc-name"><strong>Peeled Deveined Tail-On</strong></td>
+                            <td><span class="code-badge">PDTO</span></td>
+                            <td>Head and body shell completely extracted. Back vein removed. Final tail segment left on.</td>
+                            <td class="packing-badge">IQF / Retail Ready</td>
+                        </tr>
+                        <tr class="table-row-hover">
+                            <td class="proc-name"><strong>Peeled & Deveined</strong></td>
+                            <td><span class="code-badge">P&D</span></td>
+                            <td>100% naked shrimp meat. Head, shell, and tail fans are completely removed and deveined.</td>
+                            <td class="packing-badge">IQF / Bulk Packs</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sizing Calibration Section (Interactive Widget) -->
+    <section class="sizing-section" id="sizing">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">SIZE GRADING STANDARDS</span>
+                <h2 class="section-title">International Sizing & Calibration</h2>
+                <div class="section-divider"></div>
+                <p class="section-desc text-center">Shrimp sizing is determined strictly by count ranges—denoting the absolute number of shrimp pieces included per weight unit. Click the grading metrics to view detailed specifications.</p>
+            </div>
+
+            <div class="sizing-widget-container" id="sizing-widget">
+                <div class="widget-controls">
+                    <button class="widget-tab active" id="tab-headless" data-type="headless">
+                        <i class="fa-solid fa-shrimp"></i> Headless / Peeled (pcs/lb)
+                    </button>
+                    <button class="widget-tab" id="tab-headon" data-type="headon">
+                        <i class="fa-solid fa-circle-dot"></i> Head-On HOSO (pcs/kg)
+                    </button>
+                </div>
+
+                <div class="widget-display">
+                    <div class="matrix-grid" id="matrix-grid-container">
+                        <!-- Sizing cells will be loaded dynamically by javascript -->
+                    </div>
+                    
+                    <div class="selected-size-details" id="size-details-panel">
+                        <div class="details-placeholder">
+                            <i class="fa-solid fa-hand-pointer"></i>
+                            <p>Select any calibration unit in the matrix above to view technical export details.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="trade-definition-alert">
+                    <div class="alert-icon"><i class="fa-solid fa-circle-info"></i></div>
+                    <div class="alert-text">
+                        <strong>International Trade Metric Definition:</strong> Size specifications marked with a <strong>"U"</strong> stand for <strong>"Under"</strong> (e.g., U/10). This indicates that it takes fewer than 10 individual jumbo shrimp to make up 1 pound of net product weight.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shipping & Logistics Section -->
+    <section class="logistics-section" id="logistics">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">SHIPPING, COLD CHAIN & LOGISTICS</span>
+                <h2 class="section-title">Global Logistics Standards</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="logistics-grid">
+                <div class="logistics-image">
+                    <img src="{{ url_for('static', filename='images/cold_chain_logistics.png') }}" alt="Cold Chain Shipping Reefer Container" class="logistics-img">
+                    <div class="temp-badge"><i class="fa-solid fa-snowflake"></i> Maintain -25°C</div>
+                </div>
+                <div class="logistics-info">
+                    <div class="logistics-card">
+                        <div class="log-card-icon"><i class="fa-solid fa-box-archive"></i></div>
+                        <div class="log-card-content">
+                            <h4>Freezing Formats</h4>
+                            <p>Available in <strong>IQF (Individually Quick Frozen)</strong> for retail portioning or <strong>Block Frozen (1.8kg / 2.0kg blocks)</strong> for optimum ocean voyage glaze protection.</p>
+                        </div>
+                    </div>
+                    <div class="logistics-card">
+                        <div class="log-card-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+                        <div class="log-card-content">
+                            <h4>Master Packaging Configurations</h4>
+                            <p><strong>Standard US configuration:</strong> 10 bags x 2 lbs = 20 lbs Net Master Carton.<br><strong>Standard EU configuration:</strong> 10 boxes x 1 kg = 10 kg Net Master Carton.</p>
+                        </div>
+                    </div>
+                    <div class="logistics-card">
+                        <div class="log-card-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+                        <div class="log-card-content">
+                            <h4>Ocean Logistics & Containers</h4>
+                            <p>Shipped exclusively via <strong>40-foot High-Cube Reefer Containers</strong> maintained continuously at a strict cold chain baseline of <strong>-20°C to -25°C</strong>.</p>
+                        </div>
+                    </div>
+                    <div class="logistics-card">
+                        <div class="log-card-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                        <div class="log-card-content">
+                            <h4>Net Weight Guarantee & Glazing</h4>
+                            <p>Glazing customizable from <strong>5% to 30%</strong> depending on transit distance. Full compliance invoicing ensures a 100% Net Weight turnout upon container degrazing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RFQ Sourcing Request / Contact Section -->
+    <section class="rfq-section" id="rfq">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">SUBMIT A SOURCING REQUEST FOR QUOTE (RFQ)</span>
+                <h2 class="section-title">Trade Manager Sales Desk</h2>
+                <div class="section-divider"></div>
+                <p class="section-desc text-center">To finalize seasonal container allocation or request factory batch laboratory test certificates (antibiotic-free guarantees), please submit your target requirements below.</p>
+            </div>
+
+            <div class="rfq-layout">
+                <!-- Contact info panel -->
+                <div class="contact-info-panel">
+                    <h3>Contact Information</h3>
+                    <p class="contact-panel-intro">Get in touch directly with our international trade desk for immediate container availability and custom glazing agreements.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method-item">
+                            <div class="method-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="method-details">
+                                <span class="method-title">Headquarters & Processing</span>
+                                <span class="method-val">Aquaculture Industrial Belt, Nellore, Andhra Pradesh, 524001, India</span>
+                            </div>
+                        </div>
+                        <div class="contact-method-item">
+                            <div class="method-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="method-details">
+                                <span class="method-title">Trade Sales Desk Email</span>
+                                <span class="method-val"><a href="mailto:trade@sarvalokhseafoods.com">trade@sarvalokhseafoods.com</a></span>
+                            </div>
+                        </div>
+                        <div class="contact-method-item">
+                            <div class="method-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="method-details">
+                                <span class="method-title">Direct Sales Hotline</span>
+                                <span class="method-val">+91 861 234 5678</span>
+                            </div>
+                        </div>
+                        <div class="contact-method-item">
+                            <div class="method-icon"><i class="fa-solid fa-clock"></i></div>
+                            <div class="method-details">
+                                <span class="method-title">Business Hours</span>
+                                <span class="method-val">Mon - Sat: 9:00 AM - 6:00 PM (IST)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-badge-seal">
+                        <i class="fa-solid fa-certificate"></i>
+                        <div>
+                            <strong>100% Traceability</strong>
+                            <span>Batch lab certificates provided with every shipment.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Form -->
+                <div class="rfq-form-panel">
+                    <form id="rfq-form" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="company_name">Company Name <span class="required">*</span></label>
+                                <input type="text" id="company_name" name="company_name" placeholder="e.g., Global Seafoods Importers Inc." required>
+                                <span class="error-msg" id="error-company_name"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact_name">Contact Person <span class="required">*</span></label>
+                                <input type="text" id="contact_name" name="contact_name" placeholder="e.g., John Doe" required>
+                                <span class="error-msg" id="error-contact_name"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Corporate Email <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="e.g., purchasing@company.com" required>
+                                <span class="error-msg" id="error-email"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone / WhatsApp</label>
+                                <input type="tel" id="phone" name="phone" placeholder="e.g., +1 (555) 019-2834">
+                                <span class="error-msg" id="error-phone"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="destination_port">Target Destination Port <span class="required">*</span></label>
+                                <input type="text" id="destination_port" name="destination_port" placeholder="e.g., Port of Rotterdam, Netherlands" required>
+                                <span class="error-msg" id="error-destination_port"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="product_type">Product Variety <span class="required">*</span></label>
+                                <select id="product_type" name="product_type" required>
+                                    <option value="" disabled selected>Select Variety</option>
+                                    <option value="Vannamei Whiteleg Shrimp">Vannamei Whiteleg Shrimp (L. vannamei)</option>
+                                    <option value="Black Tiger Prawns">Black Tiger Prawns (P. monodon)</option>
+                                    <option value="Freshwater Scampi">Freshwater Scampi (M. rosenbergii)</option>
+                                </select>
+                                <span class="error-msg" id="error-product_type"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="processing_format">Processing Format <span class="required">*</span></label>
+                                <select id="processing_format" name="processing_format" required>
+                                    <option value="" disabled selected>Select Format</option>
+                                    <option value="HOSO">Head-On Shell-On (HOSO)</option>
+                                    <option value="HLSO">Headless Shell-On (HLSO)</option>
+                                    <option value="EZ-PEEL">Easy-Peel Formats (EZ-PEEL)</option>
+                                    <option value="PDTO">Peeled Deveined Tail-On (PDTO)</option>
+                                    <option value="P&D">Peeled & Deveined (P&D)</option>
+                                </select>
+                                <span class="error-msg" id="error-processing_format"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="size_grading">Desired Size Matrix Calibration <span class="required">*</span></label>
+                                <select id="size_grading" name="size_grading" required>
+                                    <option value="" disabled selected>Select Size Calibration</option>
+                                    <option value="U/10">U/10 (Under 10 count)</option>
+                                    <option value="11/15">11/15 count</option>
+                                    <option value="16/20">16/20 count</option>
+                                    <option value="21/25">21/25 count</option>
+                                    <option value="26/30">26/30 count</option>
+                                    <option value="31/40">31/40 count</option>
+                                    <option value="41/50">41/50 count</option>
+                                    <option value="51/60">51/60 count</option>
+                                    <option value="Mixed/Multiple Sizes">Multiple Sizes (Detail in comments)</option>
+                                </select>
+                                <span class="error-msg" id="error-size_grading"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="freezing_format">Freezing Format</label>
+                                <select id="freezing_format" name="freezing_format">
+                                    <option value="IQF (Individually Quick Frozen)">IQF (Individually Quick Frozen)</option>
+                                    <option value="Block Frozen">Block Frozen (1.8kg / 2.0kg Blocks)</option>
+                                    <option value="No Preference">No Preference / Flexible</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="glazing">Required Glazing Ratio</label>
+                                <select id="glazing" name="glazing">
+                                    <option value="5% Glaze">5% Glaze (Short distance)</option>
+                                    <option value="10% Glaze">10% Glaze (Standard)</option>
+                                    <option value="15% Glaze">15% Glaze</option>
+                                    <option value="20% Glaze">20% Glaze</option>
+                                    <option value="30% Glaze">30% Glaze (Long voyage protection)</option>
+                                    <option value="Custom Glazing">Custom Glazing (Detail in comments)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="notes">Additional Sourcing Specifications & Notes</label>
+                            <textarea id="notes" name="notes" rows="4" placeholder="Detail any specific laboratory test certificates, custom packaging requirements, or seasonal scheduling details here..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-submit" id="btn-submit-rfq">
+                            Submit Sourcing Request <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+
+                    <!-- Form submission states -->
+                    <div class="form-status-modal" id="form-status-container">
+                        <div class="status-modal-content">
+                            <div class="status-icon success-icon" id="status-icon-element"><i class="fa-solid fa-circle-check"></i></div>
+                            <h3 id="status-title">Request Submitted</h3>
+                            <p id="status-message">Your RFQ has been received.</p>
+                            <button class="btn btn-primary" id="btn-status-close">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand-col">
+                <a href="#" class="logo-container footer-logo">
+                    <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Sarvalokh Exports & Imports Logo" class="logo-img-el">
+                    <div class="logo-text">
+                        <span class="logo-brand">SARVALOKH</span>
+                        <span class="logo-sub">EXPORTS & IMPORTS</span>
+                    </div>
+                </a>
+                <p class="footer-desc">Premium shrimp and prawn exporter. Fully certified bio-secured aquaculture systems supplying global importers, retail chains, and luxury food hospitality networks.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-links-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#about">About Hub</a></li>
+                    <li><a href="#products">Products Range</a></li>
+                    <li><a href="#processing">Processing Formats</a></li>
+                    <li><a href="#sizing">Size Calibration</a></li>
+                    <li><a href="#logistics">Shipping & Logistics</a></li>
+                    <li><a href="#rfq">Submit RFQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-legal-col">
+                <h4>Compliance Standards</h4>
+                <ul>
+                    <li>BAP 4-Star Certified</li>
+                    <li>BRCGS Issue 9 AA Grade</li>
+                    <li>FDA Reg. #192837465</li>
+                    <li>HACCP Certified Infrastructure</li>
+                    <li>EIA (Export Inspection Agency) India Approved</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 Sarvalokh Exports & Imports. All rights reserved. Sourced from Nellore, Andhra Pradesh, India.</p>
+                <p>Designed for B2B Importers & Distributors.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
